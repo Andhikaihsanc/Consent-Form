@@ -1,6 +1,41 @@
 <head>
     <style type="text/css">
-       .radioButtonCell { vertical-align: top; text-align: center;}
+       .radioButtonCell {
+            vertical-align: top;
+            text-align: center;
+        }
+        
+        /* Make table responsive */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        /* Adjust table layout for smaller screens */
+        @media only screen and (max-width: 768px) {
+            table {
+                font-size: 14px;
+            }
+            th, td {
+                padding: 5px;
+            }
+           .radioButtonCell {
+                padding: 5px;
+            }
+        }
+        
+        /* Adjust table layout for even smaller screens */
+        @media only screen and (max-width: 480px) {
+            table {
+                font-size: 12px;
+            }
+            th, td {
+                padding: 2px;
+            }
+           .radioButtonCell {
+                padding: 2px;
+            }
+        }
     </style>
 </head>
 <div>
@@ -15,7 +50,7 @@
             <thead>
                 <tr>
                     <td rowspan="2" style="text-align:left; font-weight: bold"><label>JENIS INFORMASI</label></td>
-                    <td rowspan="2" style="text-align:left; font-weight: bold"><label>ISI INFORMASI</label></td>
+                    <td rowspan="2" style="text-align:center; font-weight: bold"><label>ISI INFORMASI</label></td>
                     <td colspan="2" style="text-align:center ; font-weight: bold">DILAKUKAN</td>
                 </tr>
                 <tr>
@@ -25,25 +60,25 @@
             </thead>
             <tr>
                 <td style="vertical-align:top"><label class="lblLink">Diagnosis (WD dan DD) </label></td>
-                <td><textarea class="txtForm" controlID="txtForm1" rows="2" style="width:98%; border-style:none"></textarea></td>
+                <td><textarea class="txtForm" controlID="txtForm1" rows="2" style="width:100%; border-style:none"></textarea></td>
                 <td class="radioButtonCell"><input type="radio" name="optFormGroup1" value="1" class="optForm" controlID="optForm1" /><label> Ya</label></td>
                 <td class="radioButtonCell"><input type="radio" name="optFormGroup1" value="0" class="optForm" controlID="optForm2"/><label> Tidak</label></td>
             </tr>
             <tr>
                 <td style="vertical-align:top"><label>Dasar Diagnosis </label></td>
-                <td><textarea class="txtForm" controlID="txtForm2" rows="2" style="width:98%;border-style:none"></textarea></td>
+                <td><textarea class="txtForm" controlID="txtForm2" rows="2" style="width:100%;border-style:none"></textarea></td>
                 <td class="radioButtonCell"><input type="radio" name="optFormGroup2" value="1" class="optForm" controlID="optForm3" /><label> Ya</label></td>
                 <td class="radioButtonCell"><input type="radio" name="optFormGroup2" value="0" class="optForm" controlID="optForm4"/><label> Tidak</label></td>
             </tr>
             <tr>
                 <td style="vertical-align:top"><label>Tindakan Kedokteran </label></td>
-                <td><textarea class="txtForm" controlID="txtForm2" rows="2" style="width:98%;border-style:none"></textarea></td>
+                <td><textarea class="txtForm" controlID="txtForm2" rows="2" style="width:100%;border-style:none"></textarea></td>
                 <td class="radioButtonCell"><input type="radio" name="optFormGroup3" value="1" class="optForm" controlID="optForm5" /><label> Ya</label></td>
                 <td class="radioButtonCell"><input type="radio" name="optFormGroup3" value="0" class="optForm" controlID="optForm6"/><label> Tidak</label></td>
             </tr>
             <tr>
                 <td style="vertical-align:top"><label>Tata Cara </label></td>
-                <td><textarea class="txtForm" controlID="txtForm2" rows="2" style="width:98%;border-style:none"></textarea></td>
+                <td><textarea class="txtForm" controlID="txtForm2" rows="2" style="width:100%;border-style:none"></textarea></td>
                 <td class="radioButtonCell"><input type="radio" name="optFormGroup4" value="1" class="optForm" controlID="optForm7" /><label> Ya</label></td>
                 <td class="radioButtonCell"><input type="radio" name="optFormGroup4" value="0" class="optForm" controlID="optForm8"/><label> Tidak</label></td>
             </tr>
