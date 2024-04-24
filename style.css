@@ -1,0 +1,36 @@
+.radioButtonCell {
+     vertical-align: top;
+     text-align: center;
+ }
+ 
+ /* Make table responsive */
+ table {
+     width: 100%;
+     border-collapse: collapse;
+ }
+ 
+ /* Adjust table layout for smaller screens */
+ @media only screen and (max-width: 768px) {
+     table {
+         font-size: 14px;
+     }
+     th, td {
+         padding: 5px;
+     }
+    .radioButtonCell {
+         padding: 5px;
+     }
+ }
+ 
+ /* Adjust table layout for even smaller screens */
+ @media only screen and (max-width: 480px) {
+     table {
+         font-size: 12px;
+     }
+     th, td {
+         padding: 2px;
+     }
+    .radioButtonCell {
+         padding: 2px;
+     }
+ }
