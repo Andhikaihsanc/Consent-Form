@@ -18,10 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
         } else if (dilakukanTidak !== null) {
           console.log("Dilakukan : Tidak")
         }
+        console.log("-----------------------");
       }
-
-      console.log("-----------------------");
-
     });
   });
 });
