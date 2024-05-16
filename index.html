@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consent Form</title>
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div>
         <div id="groupEducation" class="w3-container w3-animate-left peGroup" style="padding:2px">
@@ -29,32 +31,80 @@
                 </thead>
                 <tr>
                     <td style="vertical-align:top"><label class="lblLink">Diagnosis (WD dan DD) </label></td>
-                    <td><textarea class="txtForm" controlID="txtForm1" rows="2" style="width:100%; border-style:none"></textarea></td>
-                    <td class="radioButtonCell"><input type="radio" name="optFormGroup1" value="1" class="optForm" controlID="optForm1" /><label> Ya</label></td>
-                    <td class="radioButtonCell"><input type="radio" name="optFormGroup1" value="0" class="optForm" controlID="optForm2"/><label> Tidak</label></td>
+                    <td><textarea class="txtForm" controlID="txtForm1" rows="2"
+                            style="width:100%; border-style:none"></textarea></td>
+                    <td class="radioButtonCell"><input type="radio" name="optFormGroup1" value="1" class="optForm"
+                            controlID="optForm1" /><label> Ya</label></td>
+                    <td class="radioButtonCell"><input type="radio" name="optFormGroup1" value="0" class="optForm"
+                            controlID="optForm2" /><label> Tidak</label></td>
                 </tr>
                 <tr>
                     <td style="vertical-align:top"><label>Dasar Diagnosis </label></td>
-                    <td><textarea class="txtForm" controlID="txtForm2" rows="2" style="width:100%;border-style:none"></textarea></td>
-                    <td class="radioButtonCell"><input type="radio" name="optFormGroup2" value="1" class="optForm" controlID="optForm3" /><label> Ya</label></td>
-                    <td class="radioButtonCell"><input type="radio" name="optFormGroup2" value="0" class="optForm" controlID="optForm4"/><label> Tidak</label></td>
+                    <td><textarea class="txtForm" controlID="txtForm2" rows="2"
+                            style="width:100%;border-style:none"></textarea></td>
+                    <td class="radioButtonCell"><input type="radio" name="optFormGroup2" value="1" class="optForm"
+                            controlID="optForm3" /><label> Ya</label></td>
+                    <td class="radioButtonCell"><input type="radio" name="optFormGroup2" value="0" class="optForm"
+                            controlID="optForm4" /><label> Tidak</label></td>
                 </tr>
                 <tr>
                     <td style="vertical-align:top"><label>Tindakan Kedokteran </label></td>
-                    <td><textarea class="txtForm" controlID="txtForm2" rows="2" style="width:100%;border-style:none"></textarea></td>
-                    <td class="radioButtonCell"><input type="radio" name="optFormGroup3" value="1" class="optForm" controlID="optForm5" /><label> Ya</label></td>
-                    <td class="radioButtonCell"><input type="radio" name="optFormGroup3" value="0" class="optForm" controlID="optForm6"/><label> Tidak</label></td>
+                    <td><textarea class="txtForm" controlID="txtForm2" rows="2"
+                            style="width:100%;border-style:none"></textarea></td>
+                    <td class="radioButtonCell"><input type="radio" name="optFormGroup3" value="1" class="optForm"
+                            controlID="optForm5" /><label> Ya</label></td>
+                    <td class="radioButtonCell"><input type="radio" name="optFormGroup3" value="0" class="optForm"
+                            controlID="optForm6" /><label> Tidak</label></td>
                 </tr>
                 <tr>
                     <td style="vertical-align:top"><label>Tata Cara </label></td>
-                    <td><textarea class="txtForm" controlID="txtForm2" rows="2" style="width:100%;border-style:none"></textarea></td>
-                    <td class="radioButtonCell"><input type="radio" name="optFormGroup4" value="1" class="optForm" controlID="optForm7" /><label> Ya</label></td>
-                    <td class="radioButtonCell"><input type="radio" name="optFormGroup4" value="0" class="optForm" controlID="optForm8"/><label> Tidak</label></td>
+                    <td><textarea class="txtForm" controlID="txtForm2" rows="2"
+                            style="width:100%;border-style:none"></textarea></td>
+                    <td class="radioButtonCell"><input type="radio" name="optFormGroup4" value="1" class="optForm"
+                            controlID="optForm7" /><label> Ya</label></td>
+                    <td class="radioButtonCell"><input type="radio" name="optFormGroup4" value="0" class="optForm"
+                            controlID="optForm8" /><label> Tidak</label></td>
                 </tr>
             </table>
             <!-- <button type="button" id="submit">Submit</button> -->
         </div>
     </div>
+
+    <div class="signature-grid">
+        <div>
+            <label for="signature1">Pemberi :</label>
+            <br>
+            <canvas id="signatureCanvas1" style="border: 2px solid #000;"></canvas>
+            <button id="clearButton1">Clear</button>
+        </div>
+
+        <div>
+            <label for="signature2">Penerima :</label>
+            <br>
+            <canvas id="signatureCanvas2" style="border: 2px solid #000;"></canvas>
+            <button id="clearButton2">Clear</button>
+        </div>
+
+        <div>
+            <label for="signature3">Saksi 1 :</label>
+            <br>
+            <canvas id="signatureCanvas3" style="border: 2px solid #000;"></canvas>
+            <button id="clearButton3">Clear</button>
+        </div>
+
+        <div>
+            <label for="signature4">Saksi 2 :</label>
+            <br>
+            <canvas id="signatureCanvas4" style="border: 2px solid #000;"></canvas>
+            <button id="clearButton4">Clear</button>
+        </div>
+    </div>
+</div>
+<button id="saveAllSignatures">Save All Signatures</button>
+
+
+<script src="https://cdn.jsdelivr.net/npm/signature_pad@4.1.7/dist/signature_pad.umd.min.js"></script>
     <script src="index.js"></script>
 </body>
+
 </html>
