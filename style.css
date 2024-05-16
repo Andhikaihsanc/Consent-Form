@@ -1,15 +1,4 @@
-@media print {
-    #clearButton1,
-    #clearButton2,
-    #clearButton3,
-    #clearButton4, 
-    #saveAllSignatures {
-        display: none;
-    }
-}
- 
  .signature-grid {
-    
      display: grid;
      grid-template-columns: 1fr 1fr;
      grid-gap: 10px;
@@ -26,3 +15,12 @@
      display: block;
      margin-top: 10px;
  }
+
+ .radioButtonCell {
+    vertical-align: top;
+    text-align: center;
+}
+
+.hide {
+    display: none;
+  }

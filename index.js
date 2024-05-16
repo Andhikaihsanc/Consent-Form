@@ -42,3 +42,14 @@ document.addEventListener('DOMContentLoaded', function () {
   // Event listener untuk tombol "Save All Signatures"
   document.getElementById('saveAllSignatures').addEventListener('click', saveAllSignatures);
 });
+
+// Fungsi untuk menyembunyikan atau menampilkan tombol "Clear"
+function ClearButtons() {
+  clearButton1.style.display = clearButton1.style.display === 'none' ? 'inline-block' : 'none';
+  clearButton2.style.display = clearButton2.style.display === 'none' ? 'inline-block' : 'none';
+  clearButton3.style.display = clearButton3.style.display === 'none' ? 'inline-block' : 'none';
+  clearButton4.style.display = clearButton4.style.display === 'none' ? 'inline-block' : 'none';
+}
+
+// Event listener untuk tombol "Toggle Clear Buttons"
+document.getElementById('toggleButton').addEventListener('click', ClearButtons);
