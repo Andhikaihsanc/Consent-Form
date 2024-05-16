@@ -9,47 +9,52 @@ document.addEventListener('DOMContentLoaded', function () {
   const signaturePad3 = new SignaturePad(canvas3);
   const signaturePad4 = new SignaturePad(canvas4);
 
-  // Fungsi untuk mengganti canvas dengan gambar
-  function replaceCanvasWithImage(canvas, signaturePad) {
-    if (!signaturePad.isEmpty()) {
-      const image = new Image();
-      image.src = signaturePad.toDataURL();
-      canvas.parentNode.replaceChild(image, canvas);
-    }
-  }
+  const clearButton1 = document.getElementById('clearButton1');
+  const clearButton2 = document.getElementById('clearButton2');
+  const clearButton3 = document.getElementById('clearButton3');
+  const clearButton4 = document.getElementById('clearButton4');
 
-  // Fungsi untuk menyimpan semua tanda tangan
+  // Fungsi untuk mengganti semua canvas dengan gambar
   function saveAllSignatures() {
-    replaceCanvasWithImage(canvas1, signaturePad1);
-    replaceCanvasWithImage(canvas2, signaturePad2);
-    replaceCanvasWithImage(canvas3, signaturePad3);
-    replaceCanvasWithImage(canvas4, signaturePad4);
+      [canvas1, canvas2, canvas3, canvas4].forEach((canvas, index) => {
+          const signaturePad = [signaturePad1, signaturePad2, signaturePad3, signaturePad4][index];
+          if (!signaturePad.isEmpty()) {
+              const image = new Image();
+              image.src = signaturePad.toDataURL();
+              canvas.parentNode.replaceChild(image, canvas);
+          }
+      });
   }
 
-   //fungsi tambahan untuk menghapus tanda tangan
-  document.getElementById('clearButton1').addEventListener('click', function () {
-    signaturePad1.clear();
-  });
-  document.getElementById('clearButton2').addEventListener('click', function () {
-    signaturePad2.clear();
-  });
-  document.getElementById('clearButton3').addEventListener('click', function () {
-    signaturePad3.clear();
-  });
-  document.getElementById('clearButton4').addEventListener('click', function () {
-    signaturePad4.clear();
-  });
   // Event listener untuk tombol "Save All Signatures"
   document.getElementById('saveAllSignatures').addEventListener('click', saveAllSignatures);
+
+  // Fungsi untuk menyembunyikan atau menampilkan tombol "Clear"
+  function clearButtons() {
+      [clearButton1, clearButton2, clearButton3, clearButton4].forEach(button => {
+          button.style.display = button.style.display === 'none' ? 'inline-block' : 'none';
+      });
+  }
+
+  // Event listener untuk tombol "Toggle Clear Buttons"
+  document.getElementById('toggleButton').addEventListener('click', clearButtons);
+
+  // Fungsi untuk menghapus tanda tangan pada setiap signature pad
+  function clearSignaturePad(signaturePad) {
+      signaturePad.clear();
+  }
+
+  // Event listener untuk tombol "Clear" masing-masing signature pad
+  clearButton1.addEventListener('click', function () {
+      clearSignaturePad(signaturePad1);
+  });
+  clearButton2.addEventListener('click', function () {
+      clearSignaturePad(signaturePad2);
+  });
+  clearButton3.addEventListener('click', function () {
+      clearSignaturePad(signaturePad3);
+  });
+  clearButton4.addEventListener('click', function () {
+      clearSignaturePad(signaturePad4);
+  });
 });
-
-// Fungsi untuk menyembunyikan atau menampilkan tombol "Clear"
-function ClearButtons() {
-  clearButton1.style.display = clearButton1.style.display === 'none' ? 'inline-block' : 'none';
-  clearButton2.style.display = clearButton2.style.display === 'none' ? 'inline-block' : 'none';
-  clearButton3.style.display = clearButton3.style.display === 'none' ? 'inline-block' : 'none';
-  clearButton4.style.display = clearButton4.style.display === 'none' ? 'inline-block' : 'none';
-}
-
-// Event listener untuk tombol "Toggle Clear Buttons"
-document.getElementById('toggleButton').addEventListener('click', ClearButtons);
