@@ -24,20 +24,26 @@ document.addEventListener('DOMContentLoaded', function () {
               canvas.parentNode.replaceChild(image, canvas);
           }
       });
+
+      clearButton1.style.display = 'none'
+      clearButton2.style.display = 'none'
+      clearButton3.style.display = 'none'
+      clearButton4.style.display = 'none'
+     
   }
 
   // Event listener untuk tombol "Save All Signatures"
   document.getElementById('saveAllSignatures').addEventListener('click', saveAllSignatures);
 
   // Fungsi untuk menyembunyikan atau menampilkan tombol "Clear"
-  function clearButtons() {
-      [clearButton1, clearButton2, clearButton3, clearButton4].forEach(button => {
-          button.style.display = button.style.display === 'none' ? 'inline-block' : 'none';
-      });
-  }
+  // function clearButtons() {
+  //   [clearButton1, clearButton2, clearButton3, clearButton4].forEach(button => {
+  //     button.style.display = button.style.display === 'none' ? 'inline-block' : 'none';
+  // });
+  // }
 
   // Event listener untuk tombol "Toggle Clear Buttons"
-  document.getElementById('toggleButton').addEventListener('click', clearButtons);
+  // document.getElementById('toggleButton').addEventListener('click', clearButtons);
 
   // Fungsi untuk menghapus tanda tangan pada setiap signature pad
   function clearSignaturePad(signaturePad) {
